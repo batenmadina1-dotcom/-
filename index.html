@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Электрондық кезек жүйесі</title>
+    <link rel="stylesheet" href="стил.css">
+</head>
+<body>
+
+    <header>
+        <h1>Электрондық кезек жүйесі</h1>
+        <p>Кезекті басқару және қызмет көрсету орталығы</p>
+    </header>
+
+    <main class="container">
+
+        <section class="statistics">
+            <div class="card">
+                <h3>Барлық кезек</h3>
+                <p id="total">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Ожидает</h3>
+                <p id="waiting">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Аяқталды</h3>
+                <p id="completed">0</p>
+            </div>
+        </section>
+
+        <section class="current">
+            <h2>Текущий вызванный номер</h2>
+            <p id="currentNumber">Әзірге кезек шақырылған жоқ</p>
+        </section>
+
+        <section class="form-section">
+            <h2>Получить новый талон</h2>
+
+            <label for="fullname">Аты-жөніңіз:</label>
+            <input type="text"
+                   id="fullname"
+                   placeholder="Аты-жөніңізді енгізіңіз">
+
+            <label for="service">Қызмет түрі:</label>
+            <select id="service">
+                <option value="Құжат рәсімдеу">Құжат рәсімдеу</option>
+                <option value="Кеңес алу">Кеңес алу</option>
+                <option value="Төлем жасау">Төлем жасау</option>
+                <option value="Басқа қызмет">Басқа қызмет</option>
+            </select>
+
+            <button onclick="addQueue()">Кезек алу</button>
+        </section>
+
+        <section class="operator">
+            <h2>Оператор панелі</h2>
+
+            <button onclick="callNext()">Келесі кезекті шақыру</button>
+            <button onclick="completeQueue()">Қызметті аяқтау</button>
+        </section>
+
+        <section class="queue-section">
+            <h2>Кезектер тізімі</h2>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>№</th>
+                            <th>Аты-жөні</th>
+                            <th>Қызмет түрі</th>
+                            <th>Уақыты</th>
+                            <th>Күйі</th>
+                            <th>Әрекет</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="queueList"></tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Электрондық кезекті басқару жүйесі</p>
+    </footer>
+
+    <script src="жс код.js"></script>
+</body>
+</html>
+
+
+
+
